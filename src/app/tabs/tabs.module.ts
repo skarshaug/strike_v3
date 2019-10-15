@@ -14,22 +14,16 @@ const routes: Routes = [
     children: [
     { 
       path: 'dashboard', 
-      loadChildren: './dashboard/dashboard.module#DashboardPageModule' 
+      loadChildren: '../dashboard/dashboard.module#DashboardPageModule' 
     },
     { 
       path: 'swipe-strikes', 
-      loadChildren: './swipe-strikes/swipe-strikes.module#SwipeStrikesPageModule' 
+      loadChildren: '../swipe-strikes/swipe-strikes.module#SwipeStrikesPageModule' 
     },
     { 
       path: 'packages', 
-      loadChildren: './packages/packages.module#PackagesPageModule' 
-    },
-    {
-      path: '',
-      redirectTo: '/tabs/dashboard',
-      pathMatch: 'full'
-    }
-        
+      loadChildren: '../packages/packages.module#PackagesPageModule' 
+    },        
     ]
   }
 ];
