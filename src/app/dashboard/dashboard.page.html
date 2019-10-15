@@ -1,0 +1,32 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>
+      <div style="text-align:center"><img style="width:40px" src="../../assets/images/bolt.svg"></div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="profilecont">
+      <img style="border-radius: 50%;width:100px;
+      border: 10px solid #ffffff;
+      position: relative;
+      top: 40px;
+      left: 30px;" src="../../assets/images/profileimg.jpg">
+      <div style="
+      margin-top: 50px; padding: 2px 16px;">
+
+        <h4 >{{userEmail}}</h4>
+        <p >120 points</p>
+        <a class="label-md" (click)="goToEditProfile()">Edit Profile</a>
+      </div>
+  </div>
+    
+  
+  
+</ion-content>
+<ion-footer (click)="logout()">
+  <ion-toolbar color="secondary">
+    <ion-title>Log out</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input [(ngModel)]="profile.username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Birthday</ion-label>
+    <ion-input [(ngModel)]="profile.birthday"></ion-input>
+  </ion-item>
+
+  <button ion-button clear block (click)="createProfile()">Save Information</button>
+
+</ion-content>
