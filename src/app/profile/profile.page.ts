@@ -3,7 +3,6 @@ import { AngularFireAuth} from 'angularfire2/auth';
 import { Profile } from '../../models/profile';
 import { NavController, NavParams } from '@ionic/angular';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { DashboardPage } from '../dashboard/dashboard.page';
 
 @Component({
   selector: 'app-profile',
