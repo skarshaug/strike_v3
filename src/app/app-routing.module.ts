@@ -16,7 +16,8 @@ const routes: Routes = [
   { path: 'my-strikes', loadChildren: './my-strikes/my-strikes.module#MyStrikesPageModule' },
   { path: 'my-friends', loadChildren: './my-friends/my-friends.module#MyFriendsPageModule' },
   { path: 'invite-friends', loadChildren: './invite-friends/invite-friends.module#InviteFriendsPageModule' },
-  { path: 'add-new-friends', loadChildren: './add-new-friends/add-new-friends.module#AddNewFriendsPageModule' }
+  { path: 'add-new-friends', loadChildren: './add-new-friends/add-new-friends.module#AddNewFriendsPageModule' },
+  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' }
 ];
  
 @NgModule({
