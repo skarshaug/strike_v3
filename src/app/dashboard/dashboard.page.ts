@@ -29,6 +29,10 @@ export class DashboardPage implements OnInit {
   goToEditProfile(){
     this.navCtrl.navigateForward('/profile');
   }
+
+  goToSwiper(){
+    this.navCtrl.navigateForward('/swipe-strikes');
+  }
  
   logout(){
     this.authService.logoutUser()

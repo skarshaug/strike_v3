@@ -30,6 +30,7 @@ firebase.initializeApp(environment.firebase);
     ReactiveFormsModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    AngularFireModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
