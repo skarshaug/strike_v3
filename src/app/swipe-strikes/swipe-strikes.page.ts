@@ -22,7 +22,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class SwipeStrikesPage  {
 
-  @ViewChild('myswing1') swingStack: SwingStackComponent;
+  @ViewChild('myswing1', {static: false}) swingStack: SwingStackComponent;
   @ViewChildren('mycards1') swingCards: QueryList<SwingCardComponent>;
  
   cards: Array<any>;
@@ -103,5 +103,8 @@ export class SwipeStrikesPage  {
       this.navCtrl.navigateBack('');
     }
   }
+
+
+
 
 }
