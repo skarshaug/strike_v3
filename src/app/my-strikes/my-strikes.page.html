@@ -4,6 +4,302 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
 
-</ion-content>
+
+    <div padding>
+    <ion-segment [(ngModel)]="pakker">
+      <ion-segment-button class="segment-button segment-activated" value="strikes">
+        Strikes
+      </ion-segment-button>
+  
+  
+  
+      
+      <ion-segment-button value="russ">
+        Russ
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="pakker">
+    <ion-list *ngSwitchCase="'russ'">
+      
+  
+  
+  
+  
+  
+  
+  <ion-list>
+   
+  
+  
+  
+  
+      <ion-item>
+  
+         <ion-avatar  item-left style="margin: 8px 0px 8px 0;">
+   <img  class="russ-icon"  style="border-radius:0;"  src="assets/icon/shirt.svg"/>
+  
+      </ion-avatar>
+       
+      <h2   > §2 // TØYBIT   </h2>
+  
+       
+   </ion-item>
+   
+    
+    
+      </ion-list>
+  
+  
+  
+  
+  
+  
+  
+   
+  
+  
+  <ion-grid>
+  
+  
+  
+   
+  
+  
+  
+    <ion-row >
+  
+  
+    <ion-col col-4>
+      <div class="image-upload" style="display: inline;">
+      <label for="file-input">
+        <img  style="     width: 100px;
+      height: 165px;margin-right: 13px;
+      padding: 20px;
+      background-color: #e4e4e4;
+      border-radius: 25px;  display: inline;" src="assets/icon/photo-camera.svg"/>
+      </label>
+   <input id="file-input" type="file"/>
+  
+  
+  
+     
+  </div></ion-col>
+  
+  
+  <ion-col col-8>
+    
+  <div style="margin-bottom:15px">
+  <ion-card >
+  
+   
+  
+      <ion-item>
+  
+         <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+     <img class="russ-img2" src="assets/images/indinalipp.png"/>
+  
+      </ion-avatar>
+       <p style="position: absolute;right: 15px;">4 days left</p>
+      <h2 onclick="goFullscreen('player'); return false">Test</h2>
+      <p>Rødruss</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   </ion-item>
+   
+  
+  
+  
+  </ion-card>
+  
+  
+  </div>
+  
+  
+  <div style="margin-bottom:15px">
+  <ion-card >
+  
+   
+  
+      <ion-item>
+  
+         <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+     <img class="russ-img2" src="assets/images/indinalipp.png"/>
+  
+      </ion-avatar>
+       <p style="position: absolute;right: 15px;">4 days left</p>
+      <h2 onclick="goFullscreen('player'); return false">Test</h2>
+      <p>Rødruss</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   </ion-item>
+   
+  
+  
+  
+  </ion-card>
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  <div style="margin-bottom:15px">
+  <ion-card >
+  
+   
+  
+      <ion-item>
+  
+         <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+     <img class="russ-img2" src="assets/images/indinalipp.png"/>
+  
+      </ion-avatar>
+       <p style="position: absolute;right: 15px;">4 days left</p>
+      <h2 onclick="goFullscreen('player'); return false">Test</h2>
+      <p>Rødruss</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   </ion-item>
+   
+  
+  
+  
+  </ion-card>
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  <div style="margin-bottom:15px">
+  <ion-card >
+  
+   
+  
+      <ion-item>
+  
+         <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+     <img class="russ-img2" src="assets/images/indinalipp.png"/>
+  
+      </ion-avatar>
+       <p style="position: absolute;right: 15px;">4 days left</p>
+      <h2 onclick="goFullscreen('player'); return false">Test</h2>
+      <p>Rødruss</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   </ion-item>
+   
+  
+  
+  
+  </ion-card>
+  
+  
+  </div>
+  
+  
+  <ion-card >
+  
+   
+  
+      <ion-item>
+  
+         <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+     <img class="russ-img2" src="assets/images/indinalipp.png"/>
+  
+      </ion-avatar>
+       <p style="position: absolute;right: 15px;">4 days left</p>
+      <h2 onclick="goFullscreen('player'); return false">Test</h2>
+      <p>Rødruss</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   </ion-item>
+   
+  
+  
+  
+  </ion-card>
+  
+  
+  </ion-col>
+  
+  
+    </ion-row>
+  
+  
+  
+    
+  
+  
+   
+  </ion-grid>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    </ion-list>
+  
+   
+  </div>
+  
+  
+  
+  </ion-content>

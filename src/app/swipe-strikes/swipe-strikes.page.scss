@@ -1,0 +1,276 @@
+html, body, ul, li {
+    margin: 0;
+    padding: 0; }
+  
+  body {
+    background: #FCD424;
+    font: normal 16px/24px 'Helvetica Neue', Helvetica, Arial, freesans, sans-serif; }
+  
+  button, input, code {
+    display: inline-block;
+    outline: none;
+    font: inherit;
+    border: none;
+    background: #FDE991;
+    padding: 0; }
+  
+  button {
+    color: #C7433E;
+    cursor: pointer; }
+  
+  input {
+    width: 50px; }
+  
+ 
+    .test {
+      width: 300px;
+      height: 500px;
+      list-style: none;
+     
+      position: absolute;
+    
+      top: 30px;
+      left: 20%;
+    
+      display: -webkit-box;
+    
+     
+      min-width: 200px;
+     
+      cursor: default; }
+
+
+      #viewport li.clubs, #viewport li.spades {
+        color: #373737; }
+      #viewport li.diamonds, #viewport li.hearts {
+        color: #ED5D52; }
+      #viewport li.in-deck:nth-child(3) {
+        top: 2px;
+        transform: translate(2px, 2px) rotate(0.4deg); }
+      #viewport li.in-deck:nth-child(2) {
+        top: 4px;
+        transform: translate(-4px, -2px) rotate(-1deg); }
+
+    #viewport #control {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 0; }
+
+      #viewport #control button {
+        background: #FFFFFF;
+        color: #373737;
+        font-weight: bold;
+        border: none;
+        font: normal 18px/24px 'Helvetica Neue', Helvetica, Arial, freesans, sans-serif;
+        margin: 0 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        box-shadow: 0 2px 0 #63211F;
+        outline: none;
+        position: relative;
+     }
+        #viewport #control button:active {
+          background: #63211F;
+          color: #FFFFFF;
+          bottom: -2px;
+          box-shadow: none; }
+  
+  #source {
+    width: 500px;
+    margin: 20px auto; }
+    #source a {
+      color: #C7433E; }
+
+      .circle {
+        width: 40px;
+        height: 40px;
+        border-radius:  50%;
+        background: #fff;
+        margin-left: 8px;
+    }
+    
+    .circle img {
+        border-radius: 50%
+    }
+
+
+    .card-image {
+        width: 100%;
+        height: 100%;
+      }
+      .card-image img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        -o-object-fit: cover;
+           object-fit: cover;
+        width: 100%;
+        height: 100%;
+        min-height: 330px;
+      }
+      
+      .card-titles {
+        position: absolute;
+        bottom: 0;
+        padding: 40px 30px;
+      }
+      
+      .card-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 25px 35px;
+      }
+      
+      .popular-destinations-text {
+        font-size: 16px !important;
+        font-weight: 400;
+        color: #8E9AA4;
+        width: 100%;
+        min-width: 110px;
+      }
+      
+      .popular-destinations-images {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end;
+          width: 100%;
+      }
+
+
+      .onimg{
+
+
+        position: absolute;
+    top: 170px;
+      }
+      ion-card{
+
+background-color: #fff;
+
+
+      }
+      .circle {
+          width: 40px;
+          height: 40px;
+          border-radius:  50%;
+          background: #fff;
+          margin-left: 8px;
+      }
+      
+      .circle img {
+          border-radius: 50%
+      }
+
+      .global-actions {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding-top: 600px;
+        min-width: 200px;
+    }
+    ion-content{
+
+        --ion-background-color:linear-gradient(216deg, #ff8a40, #fd5068, #dc4588);;
+    }
+     .top-action,
+     .right-action,
+     .left-action {
+         border-radius: 50%;
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+       -webkit-box-align: center;
+           -ms-flex-align: center;
+               align-items: center;
+         -webkit-box-pack: center;
+             -ms-flex-pack: center;
+                 justify-content: center;
+         background: #fff;
+       -webkit-box-shadow: 0 3px 4px 0px rgba(0,0,0,0.5);
+               box-shadow: 0 3px 4px 0px rgba(0,0,0,0.5);
+     }
+     .right-action,
+     .left-action {
+         width: 60px;
+         height: 60px;
+     }
+     
+    .top-action {
+        width: 40px;
+        height: 40px;
+        margin: 0 20px;
+    }
+    
+    .final-state.active {
+      position: absolute;
+      opacity: 1;
+      top: 0x;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      transition: all 400ms ease;
+    }
+    
+    .final-state.hidden {
+      opacity: 0;
+    }
+
+    h1, h2, h3 {
+        margin: 0;
+      }
+      
+      h1 {
+        font-size: 32px;
+        font-weight: 400;
+      }
+      
+      h2 {
+        font-size: 24px;
+        font-weight: 100;
+        color: #FFF;
+        text-align: center;
+      }
+      
+      h3 {
+        font-size: 18px;
+        font-weight: 300;
+        color: #BFBFBE;
+        margin-top: 10px;
+      }
+      
+      .title {
+          width: 100%;
+          padding-bottom: 30px;
+          text-align: center;
+          font-weight: 400;
+          font-size: 22px;
+          color: #fff;
+      }
+     
+      .card-content {
+        position: relative;
+        color: #fff;
+        padding: 5px;
+      }
+    

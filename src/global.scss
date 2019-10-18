@@ -24,3 +24,39 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+input:-internal-autofill-selected {
+    background-color: none !important;}
+
+    ion-item {
+        --ion-background-color: transparent !important;
+        font-style: #fff;
+        }
+        
+         .item, .list, .item-content, .item-complex {
+        --ion-background-color: transparent !important;
+        font-style: #fff;
+        }
+
+
+        input:-webkit-autofill {
+            -webkit-text-fill-color: #fff !important;
+        }
+
+
+
+        input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+        input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+
+
+}

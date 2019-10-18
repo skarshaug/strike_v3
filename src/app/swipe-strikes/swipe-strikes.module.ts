@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { SwipeStrikesPage } from './swipe-strikes.page';
+import { SwingModule } from 'angular2-swing';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    SwingModule,
     RouterModule.forChild(routes)
   ],
   declarations: [SwipeStrikesPage]
