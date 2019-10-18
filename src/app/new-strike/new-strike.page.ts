@@ -22,14 +22,21 @@ export class NewStrikePage implements OnInit {
   points: string;
   title: string;
 
-  newStrikeCreate(value) {
-    this.af.list('/strikes').push(value)
-     .then((value) => {
-       description: this.description;
-       title: this.title;
-       points: this.points;
-       img: this.img;
-     })
+  newStrikeCreate() {
+    let newStrike = {};
+    newStrike['description'] = this.description;
+    newStrike['title'] = this.title;
+    newStrike['img'] = this.img;
+    this.af.list('/strikes').push(newStrike)
+      .then(resp => {
+        this.description = "";
+        this.title = "";
+        this.img = "";
+        console.log(resp);
+      })
+        .catch(error => {
+          console.log(error);
+        })
   }
 
 
