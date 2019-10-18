@@ -16,19 +16,19 @@
       </label>
       <input >
   
-      <input id="file-input"  type="file" [(ngModel)]="newStrike.img"/>
+      <input id="file-input"  type="file" [(ngModel)]="newStrikeimg"/>
   </div>
   <ion-list>
   
   <ion-item>
       <ion-label  floating class="list-header">Tittel</ion-label>
-      <ion-input type="text" [(ngModel)]="newStrike.title"></ion-input>
+      <ion-input type="text" [(ngModel)]="newStriketitle"></ion-input>
     </ion-item>
   
   
     <ion-item>
          <ion-label floating  class="list-header" >Beskrivelse</ion-label>
-      <ion-textarea style="min-height:200px" [(ngModel)]="newStrike.description"></ion-textarea>
+      <ion-textarea style="min-height:200px" [(ngModel)]="newStrikedescription"></ion-textarea>
     </ion-item>
   
   
@@ -96,21 +96,10 @@
   
   </ion-list>
   
-    </ion-list>
+  </ion-list>
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <div>
 
   <button ion-button full (click)="newStrikeCreate()">Lag ny strike</button>
   
   
-  </ion-content>
+</ion-content>

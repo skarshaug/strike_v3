@@ -17,26 +17,26 @@ export class NewStrikePage implements OnInit {
   ngOnInit() {
   }
 
-  description: string;
-  img: string;
-  points: string;
-  title: string;
+  newStrikedescription: string;
+  newStrikeimg: string;
+  newStrikepoints: string;
+  newStriketitle: string;
 
   newStrikeCreate() {
     let newStrike = {};
-    newStrike['description'] = this.description;
-    newStrike['title'] = this.title;
-    newStrike['img'] = this.img;
+    newStrike['description'] = this.newStrikedescription;
+    newStrike['title'] = this.newStriketitle;
+    newStrike['img'] = this.newStrikeimg;
     this.af.list('/strikes').push(newStrike)
       .then(resp => {
-        this.description = "";
-        this.title = "";
-        this.img = "";
+        this.newStrikedescription = "";
+        this.newStriketitle = "";
+        this.newStrikeimg = "";
         console.log(resp);
       })
-        .catch(error => {
-          console.log(error);
-        })
+      .catch(error => {
+        console.log(error);
+      })
   }
 
 
