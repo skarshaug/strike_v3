@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth} from 'angularfire2/auth';
 import { Profile } from '../../models/profile';
-import { NavController, NavParams } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { DashboardPage } from '../dashboard/dashboard.page';
 
 @Component({
   selector: 'app-profile',
@@ -15,12 +14,12 @@ export class ProfilePage implements OnInit {
   profile = {} as Profile;
 
   constructor(private afAuth: AngularFireAuth, private afDatabase: AngularFireDatabase,
-    public navCtrl: NavController, public navParams: NavParams, ) { 
+    public navCtrl: NavController, ) { 
     }
 
   createProfile() {
     this.afAuth.authState.subscribe(auth => {
-      this.afDatabase.list('profile/${auth.uid}').push(this.profile)
+      this.afDatabase.list('profiles/"${authenticatedUser.uid}"').push(this.profile),
       this.navCtrl.navigateForward('/dashboard');
     })
   }

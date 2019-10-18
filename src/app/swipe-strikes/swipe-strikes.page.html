@@ -1,11 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>swipe-strikes</ion-title>
+    <ion-title>
+        <div style="text-align:center"><img style="width:40px" src="../../assets/images/bolt.svg"></div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-  
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let strike of strikes" class="str-card">
+      <div style="text-align: center;">
+          <h1 style="font-weight: bold;">{{ strike.title }}</h1>
+          <hr>
+          <h3>Points: {{ strike.points }}</h3>
+          <img src="{{ strike.img }}">
+          <h4>{{ strike.description }}</h4>
+      </div>
+      
+    </ion-item>
+  </ion-list>
 
 
     <div id="viewport" >
