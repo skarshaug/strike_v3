@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-strike-details',
   templateUrl: './strike-details.page.html',
@@ -11,5 +12,6 @@ export class StrikeDetailsPage implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

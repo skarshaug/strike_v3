@@ -22,8 +22,14 @@ export class NewStrikePage implements OnInit {
   points: string;
   title: string;
 
-  newStrikeCreate() {
-    
+  newStrikeCreate(value) {
+    this.af.list('/strikes').push(value)
+     .then((value) => {
+       description: this.description;
+       title: this.title;
+       points: this.points;
+       img: this.img;
+     })
   }
 
 

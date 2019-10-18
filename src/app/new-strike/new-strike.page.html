@@ -4,6 +4,114 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="sendto-content" >
 
-</ion-content>
+  <div  class="image-upload" style="display: inline;">
+      <label for="file-input" >
+        <img  style="padding: 20px;
+      background-color: #e4e4e4;
+        display: inline;" id="myimage"
+  
+         [src]="img"/>
+      </label>
+      <input >
+  
+      <input id="file-input"  type="file"
+                 />
+  </div>
+  <ion-list>
+  
+  <ion-item>
+      <ion-label  floating class="list-header">Tittel</ion-label>
+      <ion-input type="text"  ></ion-input>
+    </ion-item>
+  
+  
+    <ion-item>
+         <ion-label floating  class="list-header" >Beskrivelse</ion-label>
+      <ion-textarea style="min-height:200px"    ></ion-textarea>
+    </ion-item>
+  
+  
+  
+  
+  <ion-list radio-group >
+  
+    <ion-list-header class="primary" >
+      Kategori
+    </ion-list-header>
+  
+  
+    <ion-item   >
+      <ion-label><img style=" border-radius: 0; overflow: hidden;width:30px ;"  ><p class="elementString">strike type</p></ion-label>
+      <ion-radio  [value]="strikeType1"></ion-radio>
+      <ion-radio  [value]="strikeTyp2"></ion-radio>
+      <ion-radio  [value]="strikeType3"></ion-radio>
+      <ion-radio  [value]="strikeType4"></ion-radio>
+
+    </ion-item>
+  
+  
+  
+  </ion-list>
+  
+  
+  
+  
+  
+  <ion-list radio-group >
+  
+    <ion-list-header class="primary" >
+      Poeng
+    </ion-list-header>
+  
+  
+    <ion-item  >
+      <ion-label>value</ion-label>
+      <ion-radio  [value]="strikePoint1"></ion-radio>
+      <ion-radio  [value]="strikePoint2"></ion-radio>
+      <ion-radio  [value]="strikePoint3"></ion-radio>
+      <ion-radio  [value]="strikePoint4"></ion-radio>
+    </ion-item>
+  
+  
+  
+  </ion-list>
+  
+  
+  <ion-list radio-group >
+  
+    <ion-list-header class="primary" >
+      ListeType
+    </ion-list-header>
+  
+  
+    <ion-item   >
+      <ion-label>beskrivelse</ion-label>
+      <ion-radio  >Swipe</ion-radio>
+      <ion-radio  >Russ</ion-radio>
+      <ion-radio  >KJærestepakken</ion-radio>
+    </ion-item>
+  
+  
+  
+  </ion-list>
+  
+    </ion-list>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div>
+  <button ion-button full (click)="newStrikeCreate()">Lag ny strike</button>
+  </div>
+  
+  
+  </ion-content>
