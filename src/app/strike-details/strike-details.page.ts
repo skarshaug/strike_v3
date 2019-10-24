@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 import * as CapacitorVPPlugin from 'capacitor-video-player';
 const { CapacitorVideoPlayer, Device } = Plugins;
+
 @Component({
   selector: 'app-strike-details',
   templateUrl: './strike-details.page.html',
