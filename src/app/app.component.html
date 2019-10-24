@@ -1,3 +1,31 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+
+  <ion-tabs>
+
+      <ion-tab-bar class="tabs" translucent="true"  slot="bottom">
+    
+        <ion-tab-button tab="dashboard">
+          <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+          <ion-label></ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="my-strikes">
+          <ion-icon name="sunny"></ion-icon>
+          <ion-label></ion-label>
+        </ion-tab-button>
+    
+        <ion-tab-button tab="swipe-strikes">
+            <ion-icon ios="ios-albums" md="md-albums"></ion-icon>
+            <ion-label></ion-label>
+          </ion-tab-button>
+    
+          <ion-tab-button tab="packages">
+              <ion-icon ios="ios-basket" md="md-basket"></ion-icon>
+              <ion-label></ion-label>
+            </ion-tab-button>
+    
+      </ion-tab-bar>
+    
+    </ion-tabs>
 </ion-app>

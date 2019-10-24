@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PackagesPage implements OnInit {
 
+
+  
+
   constructor() { }
 
   ngOnInit() {

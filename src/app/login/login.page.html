@@ -6,7 +6,7 @@
            <form class="form" [formGroup]="validations_form"  (ngSubmit)="loginUser(validations_form.value)">
  
               <ion-item>
-                <ion-label  position="floating">Email</ion-label>
+                <ion-label  position="floating" style="color:#fff">Email</ion-label>
                 <ion-input type="text" formControlName="email"></ion-input>
               </ion-item>
               <div class="validation-errors">
@@ -18,7 +18,7 @@
               </div>
            
               <ion-item>
-                <ion-label  position="floating">Password</ion-label>
+                <ion-label  position="floating" style="color:#fff">Password</ion-label>
                 <ion-input type="password" formControlName="password" required></ion-input>
               </ion-item>
               <div class="validation-errors">
@@ -29,7 +29,7 @@
                 </ng-container>
               </div>
            
-              <ion-button  class="button-md" type="submit"  [disabled]="!validations_form.valid">Log In</ion-button>
+              <ion-button  class="button-md" type="submit" routerLink="/tabs" [disabled]="!validations_form.valid">Log In</ion-button>
            
               <label class="error-message">{{errorMessage}}</label>
             </form>

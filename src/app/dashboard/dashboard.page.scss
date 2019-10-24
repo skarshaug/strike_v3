@@ -25,6 +25,23 @@ page-profile {
     
     
     }
+
+    .ion-padding, [padding] {
+        --padding-start: var(--ion-padding, 0);
+        --padding-end: var(--ion-padding, 0);
+        --padding-top: var(--ion-padding, 0);
+        --padding-bottom: var(--ion-padding, 0);
+        padding-left: var(--ion-padding, 0);
+        padding-right: var(--ion-padding, 0);
+        padding-top: var(--ion-padding, 0);
+        padding-bottom: var(--ion-padding, 0);
+    }
+    .ion-padding{
+
+
+
+        padding:0 !important;
+    }
 .profilecont {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -32,3 +49,30 @@ page-profile {
 .proilecont h4 {
     padding: 2px 16px;
 }
+
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.6rem;
+        margin-bottom: 1rem;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+    
+    
+    
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #ffffff;
+        background-color: transparent;
+    }
+    
+    .card-md {
+        margin: 10px;
+        border-radius: 2px;
+        width: calc(100% - 20px);
+        font-size: 1.4rem;
+        background: #fff;
+         -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+    
+  

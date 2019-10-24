@@ -1,68 +1,67 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-        <div style="text-align:center"><img style="width:40px" src="../../assets/images/bolt.svg"></div>
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-
- 
 
 
-    <div id="viewport" >
-        <div class="stack" swing-stack  [stackConfig]="stackConfig"  #myswing1 (throwout)="onThrowOut($event)">
-          <div class="test" swing-card #mycards1 *ngFor="let strike of strikes">
-            
-            
-              <ion-card>
-                <img src="{{ strike.img }}">
+<ion-content fullscreen>
 
-                  <div class="card-titles onimg">
-                      <h1>{{ strike.title }}</h1>
-                      <h3>12 Destinations</h3>
-                      <ion-badge item-end style="position: absolute;
-                      right: -120px;
-                      top: 90px;">{{ strike.points }} </ion-badge>
-                    </div>  
+    <div class="love">
+        <span class="item">
+            <div id="viewport" >
+                <div class="stack" swing-stack  [stackConfig]="stackConfig"  #myswing1 (throwout)="onThrowOut($event)">
+                  <div class="test" swing-card #mycards1 *ngFor="let strike of strikes">
+                    
+                    
+                      <ion-card>
+                        <img class="center-cropped" src="{{ strike.img }}">
+        
+                          <div class="card-titles onimg">
+                              <h1>{{ strike.title }}</h1>
+                              <h3>12 Destinations</h3>
+                              <ion-badge item-end style="position: absolute;
+                              right: -120px;
+                              top: 90px;">{{ strike.points }} </ion-badge>
+                            </div>  
+        
+        
+                            <ion-button fill="outline" class="s-img-btn2" slot="end">     <img   src="assets/images/elementType/toxic.svg" ></ion-button>
+        
+        <!--
+                          <ion-card-content>
+                            <ion-card-title>
+                                
+                              </ion-card-title>
+                            <p>
+                              {{ strike.description }}
+                            </p>
+                          </ion-card-content>
+        
+        
+        
+                          <div class="card-footer">
+                              <div class="popular-destinations-text">Av dine venner <br/> har tatt denne utfordingen</div>
+                              <div class="popular-destinations-images">
+                                <div class="circle"><img src="https://image.ibb.co/jmEYL7/adventure_1.jpg" width="100%" height="100%"/></div>
+                                <div class="circle"><img src="https://image.ibb.co/nsCynn/adventure_2.jpg" width="100%" height="100%"/></div>
+                                <div class="circle"><img src="https://image.ibb.co/hmsL07/adventure_3.jpg" width="100%" height="100%"/></div>
+                              </div>
+                            </div>
 
+-->
 
-                  
-
-
-                  <ion-card-content>
-                    <ion-card-title>
-                        
-                      </ion-card-title>
-                    <p>
-                      {{ strike.description }}
-                    </p>
-                  </ion-card-content>
-
-
-
-                  <div class="card-footer">
-                      <div class="popular-destinations-text">Popular <br/> Destinations</div>
-                      <div class="popular-destinations-images">
-                        <div class="circle"><img src="https://image.ibb.co/jmEYL7/adventure_1.jpg" width="100%" height="100%"/></div>
-                        <div class="circle"><img src="https://image.ibb.co/nsCynn/adventure_2.jpg" width="100%" height="100%"/></div>
-                        <div class="circle"><img src="https://image.ibb.co/hmsL07/adventure_3.jpg" width="100%" height="100%"/></div>
+                        </ion-card>
+        
+        
+                    
+        
+        
+                    
                       </div>
                     </div>
-                </ion-card>
+        
+        
+                 
+              </div></span>
+      </div> 
 
 
-            
-
-
-            
-              </div>
-            </div>
-
-
-         
-      </div>
      
 
 

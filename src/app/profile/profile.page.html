@@ -18,4 +18,73 @@
 
   <button ion-button clear block (click)="createProfile()">Save Information</button>
 
+
+
+
+
+
+
+
+ 
+
+
+
+
+  <img style="border-radius: 50%;width:100px;
+         border: 10px solid #ffffff;
+      position: relative;
+      top: 40px;
+      left: 30px;" src="assets/images/profileimg.jpg">
+  
+  
+  
+  
+  
+  <div >
+  
+  
+  
+  <img style="position: relative;left: 230px;top: 37px; width: 30px;"
+  src="assets/icon/shopping-cart.svg"  >
+  
+  
+  
+  <div style="
+      padding-left: 45px;">
+  
+  <h4 [(ngModel)]="profile.username"></h4>
+  <p >120 points</p>
+  
+  
+  <div >
+  
+  
+      <div style="margin-top:60px;">
+  <button ion-button color="light" style="display:inline-block;color: #ffffff;
+      background-color: #f74e6e;font-size: 20px;font-weight: 300;height: 40px;
+      width: 40px;">3</button>
+  <h2 style="display:inline;position: relative;
+      top: 10px;left:12px">La deg til</h2>
+  </div>
+  
+  
+  
+  <h2 style="margin-top:15px">
+  <img  style="width:40px;position: relative;
+      top: 12px;margin-right:12px" src="assets/icon/user_gray.svg" (click)="goToAddNewFriend()">   Legg til nye venner</h2>
+  
+  
+  <h2 style="margin-top:20px"><img  style="width:40px;position: relative;
+      top: 12px;margin-right:18px" src="assets/icon/agenda_gray.svg">Mine venner</h2>
+  
+  
+  
+  </div>
+  </div>
+  
+  
+  
+  
+  </div>
+
 </ion-content>

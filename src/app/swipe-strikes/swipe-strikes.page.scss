@@ -21,21 +21,26 @@ html, body, ul, li {
   input {
     width: 50px; }
   
- 
+    .center-cropped {
+      object-fit: cover; /* Do not scale the image */
+      object-position: center; /* Center the image within the element */
+      height: 400px;
+      width: 100%;
+    }
     .test {
-      width: 300px;
+    
       height: 500px;
       list-style: none;
      
       position: absolute;
     
-      top: 30px;
-      left: 20%;
+      top: 0px;
+      left: 0;
     
       display: -webkit-box;
     
      
-      min-width: 200px;
+   
      
       cursor: default; }
 
@@ -114,7 +119,7 @@ html, body, ul, li {
       .card-titles {
         position: absolute;
         bottom: 0;
-        padding: 40px 30px;
+        padding: 20px 30px;
       }
       
       .card-footer {
@@ -152,8 +157,13 @@ html, body, ul, li {
       .onimg{
 
 
+       
         position: absolute;
-    top: 170px;
+        top: 280px;
+        color: #fff;
+        width: 100%;
+        height: 120px;
+        background: linear-gradient( #7a9b9500, #090909);
       }
       ion-card{
 
@@ -184,11 +194,11 @@ background-color: #fff;
             -ms-flex-pack: center;
                 justify-content: center;
         padding-top: 600px;
-        min-width: 200px;
+        
     }
     ion-content{
 
-        --ion-background-color:linear-gradient(216deg, #ff8a40, #fd5068, #dc4588);;
+        --ion-background-color:linear-gradient(216deg, #ff8a40, #fd5068, #dc4588);
     }
      .top-action,
      .right-action,
@@ -280,4 +290,21 @@ str-card {
     text-align: center;
     width: 90%;
     display: inline-block;
+}
+
+
+.love{
+
+  width: 350px;
+  min-height: 300px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* position the div in center */
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

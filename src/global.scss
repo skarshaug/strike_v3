@@ -248,3 +248,32 @@ input:-webkit-autofill:active  {
       .toggle-ios.toggle-checked .toggle-icon {
       background-color: #967fce;
   }
+
+
+  .tabs2 {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+
+
+}
+
+
+.tab-has-label  {
+
+
+    color:#6a6268  !important;
+}
+.tabs-inner {
+    position: static !important;
+    flex: 2;
+   
+}
+
+body, span, button, h1, h2, h3, h4, h5, h6, p, ion-item, ion-title {
+    font-family: sans-serif !important;
+    }
+
+    ion-header{
+
+        --ion-background-color:linear-gradient(216deg, #ff8a40, #fd5068, #dc4588);
+    }

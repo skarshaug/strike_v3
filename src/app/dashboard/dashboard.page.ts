@@ -5,6 +5,7 @@ import { AuthenticateService } from '../services/authentication.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
+  
   styleUrls: ['./dashboard.page.scss', '../../assets/strike.css'],
 })
 export class DashboardPage implements OnInit {

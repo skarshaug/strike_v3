@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
+
 import { StrikeDetailsPage } from './strike-details.page';
 
 const routes: Routes = [
@@ -20,7 +21,9 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
-  ],
+  ]
+  ,
+  
   declarations: [StrikeDetailsPage]
 })
 export class StrikeDetailsPageModule {}

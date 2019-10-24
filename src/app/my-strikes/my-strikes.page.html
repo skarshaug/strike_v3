@@ -1,10 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>my-strikes</ion-title>
+   
+  <div style="text-align:center"><img style="width:40px" src="assets/images/bolt.svg">
+  </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content >
+
+
+    
+
+
+
+
+
 
 
     <div padding>
@@ -17,12 +27,137 @@
   
       
       <ion-segment-button value="russ">
-        Russ
+        Mine Pakker
       </ion-segment-button>
     </ion-segment>
   </div>
   
   <div [ngSwitch]="pakker">
+
+
+      <ion-list *ngSwitchCase="'strikes'">
+      
+  
+  
+  
+  
+          <!-- List of Text Items -->
+        <ion-list >
+        
+            <a class="label-md" (click)="goToStrike()"> 
+            <ion-item class="ion-no-padding"  >
+        
+              <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+        
+        
+            <img style="     border-radius: 0;
+            overflow: hidden;
+            width: 26px;
+            height: 26px;
+            margin-top: 7px;
+            margin-left: 27px; color:#363636; " src="assets/images/elementType/toxic.svg" >
+           </ion-avatar>
+            <p style="    position: absolute;
+            right: 15px;
+            top: 0px;
+            font-size: 13px;">4 days left</p>
+           <h2 style="position: relative;
+           font-size: 16px;
+           top: -15px;
+           left: 35px;color:#363636;">Lag snø-engler i badedrakt</h2>
+           <p style="    position: absolute;
+           bottom: 0;
+           font-size: 12px;
+           left: 75px;">From Siripus</p>
+        </ion-item>
+     
+      </a>
+        
+        
+        <ion-item class="ion-no-padding" >
+        
+          <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+        
+        
+        <img style="     border-radius: 0;
+        overflow: hidden;
+        width: 26px;
+        height: 26px;
+        margin-top: 7px;
+        margin-left: 27px;  " src="assets/images/elementType/toxic.svg" >
+        </ion-avatar>
+        <p style="    position: absolute;
+        right: 15px;
+        top: 0px;
+        font-size: 13px;">4 days left</p>
+        <h2 style="position: relative;
+        font-size: 16px;
+        top: -15px;
+        left: 35px;color:#363636;">Lag snø-engler i badedrakt</h2>
+        <p style="    position: absolute;
+        bottom: 0;
+        font-size: 12px;
+        left: 75px;">From Siripus</p>
+        </ion-item>
+        
+        
+        
+        
+        
+        <ion-item class="ion-no-padding" >
+        
+          <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+        
+        
+        <img style="     border-radius: 0;
+        overflow: hidden;
+        width: 26px;
+        height: 26px;
+        margin-top: 7px;
+        margin-left: 27px;  " src="assets/images/elementType/toxic.svg" >
+        </ion-avatar>
+        <p style="    position: absolute;
+        right: 15px;
+        top: 0px;
+        font-size: 13px;">4 days left</p>
+        <h2 style="position: relative;
+        font-size: 16px;
+        top: -15px;
+        left: 35px;color:#363636;">Lag snø-engler i badedrakt</h2>
+        <p style="    position: absolute;
+        bottom: 0;
+        font-size: 12px;
+        left: 75px;">From Siripus</p>
+        </ion-item>
+        
+        
+        
+        
+        
+        </ion-list>
+          
+          
+          
+          
+          
+          
+          
+           
+         
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            </ion-list>
     <ion-list *ngSwitchCase="'russ'">
       
   
@@ -31,257 +166,69 @@
   
   
   
-  <ion-list>
-   
   
+        <ion-row>
+            <ion-col size="6">
+                <ion-card>
+      
+                    <img class="center-cropped3" src="assets/images/russ4.jpg" >
+                  <ion-card-header class="onimg">
+                      
+                    <ion-card-subtitle style="color:#fff" >100 knuter</ion-card-subtitle>
+                    <ion-card-title style="color:#fff" >Russepakke</ion-card-title>
+      
+                  
+                  </ion-card-header>
+                  <ion-button fill="outline" class="s-img-btn2" slot="end">99 kr</ion-button>
+                </ion-card> 
+            </ion-col>
+      
+      
+      
+            <ion-col size="6">
+                <ion-card>
+      
+                    <img class="center-cropped" src="assets/images/pakke_venner.jpg" >
+                  <ion-card-header class="onimg">
+                      
+                    <ion-card-subtitle style="color:#fff" >30 Strikes</ion-card-subtitle>
+                    <ion-card-title style="color:#fff" >Vennepakken</ion-card-title>
+      
+                  
+                  </ion-card-header>
+                  <ion-button fill="outline" class="s-img-btn2" slot="end">3 / 30</ion-button>
+                </ion-card> 
+            </ion-col>
+      
+      
+            <ion-col size="6">
+                <ion-card>
+      
+                    <img class="center-cropped" src="assets/images/pakke_couple.jpg" >
+                  <ion-card-header class="onimg">
+                      
+                    <ion-card-subtitle style="color:#fff" >30 Strikes</ion-card-subtitle>
+                    <ion-card-title style="color:#fff" >Kjærestepakken</ion-card-title>
+      
+                  
+                  </ion-card-header>
+                  <ion-button fill="outline" class="s-img-btn2" slot="end">0 / 30</ion-button>
+                </ion-card> 
+            </ion-col>
+      
+            <ion-col size="6">
+               
+
+
+
+
+            </ion-col>
+          </ion-row>
   
-  
-  
-      <ion-item>
-  
-         <ion-avatar  item-left style="margin: 8px 0px 8px 0;">
-   <img  class="russ-icon"  style="border-radius:0;"  src="assets/icon/shirt.svg"/>
-  
-      </ion-avatar>
-       
-      <h2   > §2 // TØYBIT   </h2>
-  
-       
-   </ion-item>
-   
-    
-    
-      </ion-list>
-  
-  
-  
-  
-  
-  
-  
-   
-  
-  
-  <ion-grid>
-  
-  
-  
-   
-  
-  
-  
-    <ion-row >
-  
-  
-    <ion-col col-4>
-      <div class="image-upload" style="display: inline;">
-      <label for="file-input">
-        <img  style="     width: 100px;
-      height: 165px;margin-right: 13px;
-      padding: 20px;
-      background-color: #e4e4e4;
-      border-radius: 25px;  display: inline;" src="assets/icon/photo-camera.svg"/>
-      </label>
-   <input id="file-input" type="file"/>
-  
-  
-  
-     
-  </div></ion-col>
-  
-  
-  <ion-col col-8>
-    
-  <div style="margin-bottom:15px">
-  <ion-card >
-  
-   
-  
-      <ion-item>
-  
-         <ion-avatar item-left style="margin: 8px 0px 8px 0;">
-     <img class="russ-img2" src="assets/images/indinalipp.png"/>
-  
-      </ion-avatar>
-       <p style="position: absolute;right: 15px;">4 days left</p>
-      <h2 onclick="goFullscreen('player'); return false">Test</h2>
-      <p>Rødruss</p>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   </ion-item>
-   
-  
-  
-  
-  </ion-card>
-  
-  
-  </div>
-  
-  
-  <div style="margin-bottom:15px">
-  <ion-card >
-  
-   
-  
-      <ion-item>
-  
-         <ion-avatar item-left style="margin: 8px 0px 8px 0;">
-     <img class="russ-img2" src="assets/images/indinalipp.png"/>
-  
-      </ion-avatar>
-       <p style="position: absolute;right: 15px;">4 days left</p>
-      <h2 onclick="goFullscreen('player'); return false">Test</h2>
-      <p>Rødruss</p>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   </ion-item>
-   
-  
-  
-  
-  </ion-card>
-  
-  
-  </div>
-  
-  
-  
-  
-  
-  <div style="margin-bottom:15px">
-  <ion-card >
-  
-   
-  
-      <ion-item>
-  
-         <ion-avatar item-left style="margin: 8px 0px 8px 0;">
-     <img class="russ-img2" src="assets/images/indinalipp.png"/>
-  
-      </ion-avatar>
-       <p style="position: absolute;right: 15px;">4 days left</p>
-      <h2 onclick="goFullscreen('player'); return false">Test</h2>
-      <p>Rødruss</p>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   </ion-item>
-   
-  
-  
-  
-  </ion-card>
-  
-  
-  </div>
-  
-  
-  
-  
-  
-  <div style="margin-bottom:15px">
-  <ion-card >
-  
-   
-  
-      <ion-item>
-  
-         <ion-avatar item-left style="margin: 8px 0px 8px 0;">
-     <img class="russ-img2" src="assets/images/indinalipp.png"/>
-  
-      </ion-avatar>
-       <p style="position: absolute;right: 15px;">4 days left</p>
-      <h2 onclick="goFullscreen('player'); return false">Test</h2>
-      <p>Rødruss</p>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   </ion-item>
-   
-  
-  
-  
-  </ion-card>
-  
-  
-  </div>
-  
-  
-  <ion-card >
-  
-   
-  
-      <ion-item>
-  
-         <ion-avatar item-left style="margin: 8px 0px 8px 0;">
-     <img class="russ-img2" src="assets/images/indinalipp.png"/>
-  
-      </ion-avatar>
-       <p style="position: absolute;right: 15px;">4 days left</p>
-      <h2 onclick="goFullscreen('player'); return false">Test</h2>
-      <p>Rødruss</p>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   </ion-item>
-   
-  
-  
-  
-  </ion-card>
-  
-  
-  </ion-col>
-  
-  
-    </ion-row>
-  
-  
-  
-    
   
   
    
-  </ion-grid>
-  
+ 
   
   
   
@@ -301,5 +248,8 @@
   </div>
   
   
+  
+
+
   
   </ion-content>

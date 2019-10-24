@@ -9,24 +9,26 @@
 <ion-content Style="    height: 700px;">
  
 
+  <ion-button (click)="testPlugin()" color='primary' size="large">Test Video PlayerPlugin</ion-button>
     
-    
-    <img style="     width: 40px;
+    <img (click)="playVideoHosted()" style="     width: 40px;
         position: absolute;
-        top: 220px;
+        top: 250px;
         left: 10px;" src="assets/icon/info.svg">
     
     
       <div style="background-color:#f30648;width:130px;height:40px; border-radius:20px;       position: absolute;
-        top: 220px;
+        top: 250px;
         right:3% ">
         <div style="    position: relative;
         top: 10px;
         left: 18px;">
     <ion-avatar item-left>
           <img style=" border-radius: 0;
-        overflow: hidden;width: 20px; float: left;margin-right: 5px;" src="assets/images/like.svg">
-        </ion-avatar> <span style=" float: left;color: #fff;">  120 points</span>
+        overflow: hidden;width: 20px; height:20px;float: left;margin-right: 5px;" src="assets/images/like.svg">
+        </ion-avatar> <span style=" float: left;color: #fff;position: absolute;
+        top: 0px;
+        left: 25px;">  120 points</span>
     </div>
       </div>
         
@@ -37,11 +39,9 @@
     
     
       
-      <img class="b-img" style="  position: absolute;
-        top: -90px;
-        z-index: -100;"[src]="strike.img"/>
+      <img class="b-img" src="assets/images/strike1.jpg">
     
-    <ion-card style="margin-top:230px;">
+    <ion-card style="margin: 0">
     <ion-card-content>
     
     
@@ -55,9 +55,9 @@
         </p>
     
     
-    <p >tittel</p>
+    <h2>The Ice Bucket Challenge</h2>
         
-       <p>beskrivelse</p>  
+       <p>The Ice Bucket Challenge, sometimes called the ALS Ice Bucket Challenge, was an activity involving the dumping of a bucket of ice water over a person's head, either by another person or self-administered, to promote awareness of the disease amyotrophic lateral sclerosis (ALS, also known as motor neuron disease and in</p>  
     
     
       </ion-card-content>

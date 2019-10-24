@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { TabsPageRoutingModule } from './tabs.router.module';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -23,7 +24,9 @@ const routes: Routes = [
     { 
       path: 'packages', 
       loadChildren: '../packages/packages.module#PackagesPageModule' 
-    },        
+    }, 
+    
+  
     ]
   }
 ];
@@ -33,8 +36,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    TabsPageRoutingModule
   ],
-  declarations: [TabsPage]
+  declarations: [TabsPage],
+  exports: [RouterModule]
 })
 export class TabsPageModule {}

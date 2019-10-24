@@ -1,0 +1,114 @@
+str-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+    text-align: center;
+    width: 90%;
+    display: inline-block;
+}
+
+.onimg{
+
+
+    position: absolute;
+    top: 200px;
+    color: #ffffff !important;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient( #7a9b9500, #090909);
+  }
+
+
+  ion-content{
+
+    --ion-background-color:#f2f2f2;;
+}
+
+.pakkeimg{
+    width: 80px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+ion-card .list-md {
+    --background:#FFF !important;
+    background:#FFF !important;
+
+padding:0 !important}
+
+
+    .s-subtitle{
+
+
+        position: absolute;
+    top: 35px;
+    font-size: 12px;
+    left: 65px;
+    }
+
+.s-title{
+
+
+    margin-top: -10px;
+}
+
+
+.slide-zoom, .swiper-slide {
+    text-align: left !important;
+}
+
+
+.center-cropped {
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 300px;
+    width: 100%;
+  }
+
+  .center-cropped2 {
+    object-fit: cover; /* Do not scale the image */
+    object-position: left;
+    height: 50px;
+    width: 50px;
+  }
+
+  .center-cropped3 {
+    object-fit: cover; /* Do not scale the image */
+    object-position: left; /* Center the image within the element */
+    height: 300px;
+    width: 100%;
+  }
+
+  .s-img-btn{
+
+
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    z-index: 1000;
+    color: white;
+    --border-color: white;
+  }
+
+  .s-img-btn2{
+
+
+   
+  
+
+  position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    color: #ffffff;
+    --border-color: transparent;
+    --background: #f04b74;}
+
+
+    .swiper-pagination {
+        position: unset !important;}
+
+
+        .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+            bottom: -10px !important;}

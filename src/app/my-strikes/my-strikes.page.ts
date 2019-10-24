@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-my-strikes',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyStrikesPage implements OnInit {
 
-  constructor() { }
+  constructor(  private navCtrl: NavController,) { 
+
+    
+  }
 
   ngOnInit() {
+  }
+
+
+  
+  goToStrike(){
+    this.navCtrl.navigateForward('/strike-details');
   }
 
 }
