@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-pakke-details',
@@ -6,119 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pakke-details.page.scss'],
 })
 export class PakkeDetailsPage implements OnInit {
-  items=[ 
+  strikes: any[];
+  russtrikes: any[];
 
-    
-    { title:'Søvnløs',  beskrivelse:'Hold deg våken i 48 timer uten søvn. ', element:'Diverse', icon:'btn flaticon-knot'},
-    { title:'Tenk på hjernen',  beskrivelse:'Dra til helsestasjonen og vaksiner deg mot hjernhinnebetennelse, ta en selfie utenfor helsestasjonen eller bilde av sprøyta.' , element:'Helse',  icon:'btn flaticon-syringe'},
-    { title:'Gi tilbake', beskrivelse:'Delta i en aksjon som hjelper humaniteten, enten det er bøssebæring eller suppekjøkken. Ta en videosnutt av at du f.eks. ringer på en dør med bøsse.', element:'Hjertesak', icon:'btn flaticon-care'},
-    { title:'Kasseknusern', beskrivelse:'Du har 24 timer på deg til å drikke opp en kasse med 0,33 l øl/cider. Sett sammen korte videosnutter av at kassen minker.', element:'Toxic', icon:'btn flaticon-beer'},
-    { title:'Resirkuler', beskrivelse:'Pant flasker/bokser etter hvert vors og rulling, og trykk på Røde Kors knappen. Man MÅ vinne gevinst på pantelotteriet deres for å få knute. Ta bilde av gevinstlappen.', element:'Hjertesak', icon:'btn flaticon-recycle-sign'},
-    { title:'Check before Wreck', beskrivelse:'Dra til legen og test deg for seksuelt overførbare infeksjoner. Ta en selfie i venterommet eller forran legestasjonen. ', element:'Helse', icon:'btn flaticon-first-aid-kit'},
-    { title:'På loffen', beskrivelse:'Gå med brød som sko en hel skoledag. Ta en videosnutt av at du går til klasserommet ditt.', element:'Skoleplassen', icon:'btn flaticon-bread-1'},
-    { title:'Ice-cold', beskrivelse:'Bad i havet, elv eller innsjø før 1.Mai. Få noen til å filme deg.', element:'Trendy', icon:'btn flaticon-snowflake'},
-    { title:'Sharing is caring', beskrivelse:'Dra til nærmeste barneavdeling og del ut russekort til barna. Ta en selfie forran barneavdelings skiltet.', element:'Hjertesak', icon:'btn flaticon-lollipop-candy'},
-    { title:'Bananas', beskrivelse:'Spis 2 bananer og skyll det ned med 1,5L Sprite. (Se hva som skjer). Film prosessen i speed mode.', element:'Mat', icon:'SPRITE KORK'},
-    { title: 'go play outside', beskrivelse:'Ha sikker sex utendørs, ta bilde av en kondom og partner.', element:'Toxic', icon:'btn flaticon-pine-cone'},
-    { title:'Dancing queen', beskrivelse:' Ha en 5 minutters poledance session på et offentlig transportmiddel, få noen til å filme deg og få med at det sitter fler i bussen. ', element:'Diverse', icon:'Mbtn flaticon-hat'},
-    { title:'In n Out', beskrivelse:'Drikk en halvliter _____ mens du tisser. Få noen til å filme fra avstand, vær tildekket.', element:'Mat', icon:'SUGERØR'},
-    { title:'McSwallow', beskrivelse:'Spis en cheeseburger på en bit. Film eller bli filmet at du gjør dette.', element:'Mat', icon:'Gbtn flaticon-burger-1'},
-    { title:'Rose', beskrivelse:'Gi en rose til en fremmed du synes er attraktiv. Få noen til å filme.', element:'Trendy', icon:'btn flaticon-rose'},
-    { title:'Kiss a Cop', beskrivelse:'Kyss en politimann/dame, husk å spørre pent. Ta en selfie, eller få noen til å filme dette.', element:'Trendy', icon:'btn flaticon-sheriff'},
-    { title:'Brainfreeze', beskrivelse:'Drikk en slush på 2 minutter på Russens Dag. Film deg selv eller få noen andre til å gjøre det.', element:'Mat', icon:'SLUSH SUGERØR'},
-    { title:'Safe sex is great sex', beskrivelse:'Ha sikker sex i løpet av russetiden. Ta et bilde som består av ryggen til partnern og et prevansjonsmiddel uten å gi ut hvem vedkommende er.', element:'Toxic', icon:'STJERNE PÅ LUA'},
-    
+  constructor(public af: AngularFireDatabase) {
+    af.list('/strikes').valueChanges()
+    .subscribe(result => {
+      this.strikes = result;
+      console.log(this.strikes);
+  });
 
-   { title:'Skolelys', beskrivelse:'Ha sikker sex på skolens område. ', element:'Toxic', icon:'btn flaticon-edit'},
-   { title:'Puffpuffpass', beskrivelse:'Røyk så mye du kan av en sigarett på 25 sekunder, film selv eller få noen andre til å gjøre det.', element:'Toxic', icon:'btn flaticon-cigarette'},
-   { title:'Sweatsuit', beskrivelse:'Bruk russebuksa i offentligheten gjennom hele russetiden. Dokumneter sluttresultatet.', element:'Diverse', icon:'btn flaticon-button'},
-   { title:'Loser', beskrivelse:'Sett en “L” (for øvelseskjøring) bakpå en offentlig tjenestebil, Uten at de legger merke til det. ', element:'Diverse', icon:'L'},
-   { title:'Tvangstrøye', beskrivelse:'Drikk en øl/cider på 0,33-liter uten hender eller assistanse, deretter kliner du med en i Russens Hovedstyre. Få noen til å filme.', element:'Toxic', icon:'btn flaticon-kiss-2'},
-   { title:'Båndtvang', beskrivelse:'Gå med en medruss i bånd en hel skoledag, få noen til å filme noen snutter eller film selv, sett de sammen.', element:'Skoleplassen', icon:'btn flaticon-dog-collar'},
-   { title:'Klein', beskrivelse:'Kjøp en pakke kondomer kun ved hjelp av kroppsspråk. Få noen til å snikfilme dette.', element:'Diverse', icon:'btn flaticon-condom'},
-   { title:'Blacktaxi', beskrivelse:'Stop russebussen/bilen på en holdeplass og kjør en tilfeldig person dit han/hun skal. Film dette.', element:'Russebuss', icon:'flaticon-bus'},
-   { title:'Hook', beskrivelse:'Klin med et medlem av Russens Hovedstyre. Få noen til å filme.', element:'Trendy', icon:'btn flaticon-lips'},
-   { title:'Hoff med dong', beskrivelse:'Få et medlem av Russens Hovedstyre til å bekrefte med tommel opp.', element:'Toxic', icon:'btn flaticon-champagne-bottle'},
-   { title:'Sjef med dong', beskrivelse:'Ha sikker sex med presidenten i Russens Hovedstyre.', element:'Toxic', icon:'btn flaticon-champagne-bottle'},
-   { title:'Tarzan', beskrivelse:'Ha sikker sex i et tre.', element:'Toxic', icon:'GULL-KONGLE'},
-   { title:'Gaffateip', beskrivelse:'Gå teipet sammen to og to en hel skoledag, både armer og ben. Ta bilder eller film i løpet av dagen, og sett sammen til en videosnutt.', element:'Skoleplassen', icon:'btn flaticon-tape-1'},
-   { title:'Vindustitter', beskrivelse:'Lat som du er en utstillingsdukke i et butikkvindu i minst 5 minutter. Få noen til å filme fra utsiden.', element:'Diverse', icon:'btn flaticon-lego'},
-   { title:'Feilplassert', beskrivelse:'Vær aktiv i en hel førsteklassetime. Få en av førsteklassingene til å filme.', element:'Skoleplassen', icon:'btn flaticon-pacifier'},
-   { title:'Sugarlips', beskrivelse:'Klin med en medruss av samme kjønn, film selv eller få noen andre til å gjøre det.', element:'Diverse', icon:'btn flaticon-feather-pen'},
-   { title:'Vis litt hud', beskrivelse:'Sitt en hel skoletime kun iført undertøy. Ta en selfie, eller få noen til å ta et bilde.', element:'Skoleplassen', icon:'btn flaticon-panties'},
-   { title:'Corny', beskrivelse:'Gå sammen med en eller flere medruss. Fyll opp et badekar med melk og cornflakes og bad i det. Film dette.', element:'Mat', icon:'btn flaticon-corn'},
-   { title:'Bumpy ride', beskrivelse:'', element:'Kreativitet', icon:'BILDE AV KONGEFAMILIEN'},
-   { title:'Munchies', beskrivelse:'Spis en BigMac på tre jafs. Film selv eller få noen andre til å filme.', element:'Mat', icon:'btn flaticon-burger-1'},
-   { title:'Hjulene på bussen', beskrivelse:'Kjør 10 runder i en rundkjøring med russebussen/bilen. (Etter kl 22:00) Film', element:'Russebuss', icon:'flaticon-bus'},
-   { title:'Våt trening', beskrivelse:'Ha gym kun iført svømmetøy. Ta en selfie med gymlæreren eller i et gymapparat. ', element:'Skoleplassen', icon:'btn flaticon-swimsuit'},
-   { title:'Optimist', beskrivelse:'Si ja til alt noen sier eller spør deg om en hel dag. (gjelder ikke seksuell kontakt) Dokumenter gjennom videosnutter av at du gjør handlingene.', element:'Trendy', icon:'SMIL'},
-   { title:'milf', beskrivelse:'Spør moren til en medruss om sextips, dokumenter gjennom et lydopptak.', element:'Diverse', icon:'SIKKERHETSNÅL'},
-   { title:'Tricolor', beskrivelse:'Spis to liter is i løpet av en skoletime, uten hjelp. Ta bilde før, i mens og etter av isboksen.', element:'Skoleplassen', icon:'btn flaticon-popsicle-1'},
-   { title:'Sjåfør', beskrivelse:'Vær edru gjennom hele russetiden.', element:'Mat', icon:'SOLOKORK'},
-   { title:'Plantespiser', beskrivelse:'Spør en medruss om å få russekort og spis det foran dem. Få noen til å filme reaksjonen.', element:'Diverse', icon:'DITT RUSSEKORT'},
-   { title:'Rulling', beskrivelse:'Få med deg en i russens hovedstyre på rulling i deres buss/bil. Film en snutt fra kvelden.', element:'Russebuss', icon:'btn flaticon-bus'},
-   { title:'HvemHvaHvor', beskrivelse:'Lat som om du har hukommelsestap en hel skoledag. Team opp med en medruss å få den til å filme litt i blant. ', element:'Skoleplassen', icon:'NAVNELAPP'},
-   { title:'Stress', beskrivelse:'Ta 15 selvvalgte knuter på 24 timer. Dokumenter alle via en video bestående av snutter fra hver, få med tidspunkt. ', element:'Trendy', icon:'GULLKNUTE'},
-   { title:'Rektorrulle', beskrivelse:'Inviter rektor på rulling. Få noen til å filme.', element:'Russebuss', icon:'GUL POST-IT MED REKTORS SIGNATUR'},
-   { title:'Instafamous', beskrivelse:'Lat som du er kjendis og be 10 fremmede personer google deg. Film dette, diskre eller få noen til å filme. ', element:'Trendy', icon:'SOLBRILLER'},
-   { title:'Vannkrig', beskrivelse:'Arranger vannkrig i friminuttet. (Ute), få med flest mulig. Film dette.', element:'Skoleplassen', icon:'VANNBALLONG'},
-   { title:'chickenwing', beskrivelse:'Vær wingman/woman for en medruss. Film at medrussen bekrefter hjelpen din. ', element:'Trendy', icon:'BILDE AV BARNEY STINSON'},
-   { title:'#Fraværsgrensa', beskrivelse:'Vær på skolen hver dag i russetiden. (#Fraværsgrensa) Dokumenter med en screenshot av fraværstallet ditt.', element:'Skoleplassen', icon:'btn flaticon-birthday-cake'},
-   { title:'trangt og tissatrengt', beskrivelse:'Del en kasse 0,33-liter øl/cider i en telefonboks med tre medruss, uten å tisse. Få noen til å filme fra utsiden.', element:'Toxic', icon:'BIT AV GULESIDER '},
-   { title:'Ung og dum', beskrivelse:'Sett statusen din på Facebook til ”forlovet” i 24 timer. Legg ut screenshots av statusen og kommentarer.', element:'Diverse', icon:'btn flaticon-wedding-ring'},
-   { title:'True love', beskrivelse:'Ha kjæreste gjennom hele russetiden. Legg ut bilder sammen fra under russetiden.', element:'Hjertesak', icon:'btn flaticon-kiss-2'},
-   { title:'Fake Girlfriend', beskrivelse:'Ha med en oppblåsbar dukke på rulling. Legg ut filmsnutt fra kvelden.', element:'Russebuss', icon:'btn flaticon-birthday-and-party'},
-   { title:'Drive-through', beskrivelse:'Trill en handlevogn gjennom en drive-through og bestill et måltid. (lever tilbake handlevognen etterpå) Få en medruss til å filme eller film selv.', element:'Mat', icon:'btn flaticon-burger-1'},
-   { title:'Rundkjøring', beskrivelse:'Sitt sammen med andre medruss i en rundkjøring og ha et skilt hvor det står: “En tut, en skål!”. Sett mobilen opp og film fra avstand eller få noen andre til å filme.', element:'Trendy', icon:'EN BIT AV SKILTET'},
-   { title:'5 minutters', beskrivelse:'Kjøp en pakke kondomer på en bensinstasjon. Gå inn på toalettet med en medruss og kom ut etter 5 minutter og se kjempefornøyd ut. Få noen til å filme', element:'Trendy', icon:'PØLSEPAPIR'},
-   { title:'NEI er NEI', beskrivelse:'Stryk på «NEI er NEI»-merket fra Amnesty på russebuksen/russedressen. Ta bilde.', element:'Hjertesak', icon:'AMNESTY LOGO'},
-   { title:'Blåe knær', beskrivelse:'Krabb fra stortinget til slottet. Film selv eller få noen til å filme.', element:'Trendy', icon:'SKOLISSE'},
-   { title:'Ubudne gjester', beskrivelse:'Ha vors i et møbel-utstillingsrom i en butikk (f.eks. Ikea, Skeidar) Film en snutt.', element:'Trendy', icon:'VISITTKORT FRA BUTIKKEN'},
-   { title:'Feed me', beskrivelse:'Spander nattmat på et medlem av Russens Hovedstyre. Ta bilde av han/hun med mat i hånda og tommel opp.', element:'Mat', icon:'SIGNERT KVITTERING'},
-   { title:'Harald Hårfagre', beskrivelse:'La absolutt alt hår gro og vokse fritt gjennom hele russetiden. Før og etter bilde.', element:'Diverse', icon:'BARBEHØVEL (UTEN BLAD)'},
-   { title:'Run Forrest', beskrivelse:'Løp gjennom skolegården til en barneskole når de har friminutt uten å dele ut et eneste russekort. Få noen til å filme eller film selv.', element:'Trendy', icon:'PROPELL'},
-   { title:'Smårips', beskrivelse:'Vær kjæreste med en førsteklassing på VGS. Denne må noen andre bøste deg for.', element:'Diverse', icon:'AVKLIPPET DUSK'},
-   { title:'Barnemat', beskrivelse:'Stjel et russekort fra et barn. Få noen til å filme.', element:'Diverse', icon:'RUSSEKORTET'},
-   { title:'69', beskrivelse:'Denne kan du gjette deg fram til ;) Hvordan dokumentere?', element:'Toxic', icon:'TALLET 69 I BREMMEN'},
-   { title:'Saving myself', beskrivelse:'Ikke ha sex gjennom hele russetiden.', element:'Diverse', icon:'UÅPNET KONDOMPAKKE'},
-   { title:'Velge og vrake', beskrivelse:'Ring opplysningen 1881 og be dem gå inn på russenshovedstyre.no/ russeknuter for å anbefale deg 5 russeknuter. Deretter, gjennomfør minst 3 av de 5 anbefalte knutene. Få noen til å filme telefonsamtamalen, og legg ut knutene hver for seg.', element:'Trendy', icon:'1881-LOGO'},
-   { title:'Tvangsklipp', beskrivelse:'La en medruss klippe deg. Minimum 2 cm. Få en annen medruss til å filme hendelsen.', element:'Diverse', icon:'btn flaticon-hair-cut'},
-   { title:'Homewrecker', beskrivelse:'Klin med en bror eller søster til en venn. Legg ut selfie av deg og den heldige.', element:'Trendy', icon:'SELFIE AV DEG OG DEN HELDIGE'},
-   { title:'dollahdollah bill yall', beskrivelse:'Gå sammen med 3 medruss og kjøp opp alt av en vare i skolens kantine Ta bilde av dungen ved kassapparatet. ', element:'Skoleplassen', icon:'BIT AV KVITTERINGEN'},
-   { title:'Bånn den', beskrivelse:'Drikk en halvliter øl/cider på ti sekunder. Få en til og ta tiden, og en annen til å filme.', element:'Toxic', icon:'STOPPEKLOKKE'},
-   { title:'Fartsbot', beskrivelse:'Ha radarkontroll med hårføner og refleksvest i 50-sonen, ta med noen medruss. Få noen til å filme.', element:'Trendy', icon:'REFLEKS'},
-   { title:'Brag list', beskrivelse:'Få signaturen i et skjema og snappen til 10 personer du har klint med. Legg ut bilde av skjemaet, og nylig lagt til/ lista på snapchat.', element:'Trendy', icon:'LEPPEPOMADE'},
-   { title:'Smørbukken', beskrivelse:'Kjøp en pakke smør og spør de ansatte om det funker som glidemiddel. Snikfilm dette, best om du er alene.', element:'Mat', icon:'SMØRLOKKET'},
-   { title:'Teatchers Pet', beskrivelse:'Ha med en lærer på rulling. Film en snutt fra rullingen.', element:'Russebuss', icon:'LINJAL'},
-   { title:'Mo i knærne', beskrivelse:'Krabb inn i en matvarebutikk og kjøp øl/cider. Dersom du ikke når ølet/cideren må du be om hjelp fra en du ikke kjenner. Få med noen som kan filme dette.', element:'Trendy', icon:'EMBALASJEN'},
-   { title:'Irriterende camping', beskrivelse:'Sov i telt i hagen til en lærer, ta en videosnutt hvor læreren verifiserer dette.', element:'Trendy', icon:'KVIST FRA HAGEN'},
-   { title:'Lærerlus', beskrivelse:'Lån bort russeluen din til en lærer en hel skoletime. Film snutter fra timen og sett de sammen.', element:'Skoleplassen', icon:'AUTOGRAF FRA LÆREREN'},
-   { title:'Cafeteria Tournament', beskrivelse:'Arranger beerpong-turnering i friminuttet med drikke fra kantinen,få noen til å filme dette.', element:'Skoleplassen', icon:'PLASTKOPP'},
-   { title:'OralBeverage', beskrivelse:'Putt 2 tamponger i munnviken og drikk en halvliter øl/cider, få noen til å filme.', element:'Toxic', icon:'TAMPONG'},
-   { title:'Cheering kiss', beskrivelse:'Løp ut på en fotballbane og kyss dommeren eller keeperen. Få en medruss til å filme fra tribuna. ', element:'Trendy', icon:'RØDT KORT'},
-   { title:'Knock knock', beskrivelse:'Ring på 10 tilfeldige husstander og spør pent om de vil være med ut og rulle. Snikfilm hver gang du spør,og ta en snutt til på rullingen.', element:'Russebuss', icon:'RINGEKLOKKE'},
-   { title:'Tante Rød', beskrivelse:'Ha sikker sex under menstruasjon eller med noen som har det. Ta bilde av kondomen etterpå', element:'Toxic', icon:'LEKEBRANNBIL'},
-   { title:'Budrunde', beskrivelse:'Prøv å kjøpe til deg en del av antrekket til en fremmed som ikke er russ. Snikfilm dette.', element:'Diverse', icon:'TØYBIT'},
-   { title:'Høylytt', beskrivelse:'Bruk ørepropper under en hel rulling eller russetreff,Få noen til å ta bilder/filme eller gjør det selv.', element:'Russebuss', icon:'PROPP I LUA'},
-   { title:'Romantikk i kantina', beskrivelse:'Romantisk date med en som ikke er russ i kantinen på skolen i storefri (med blomster og stearinlys). Få noen til å ta bilde eller gjør det selv.', element:'Skoleplassen', icon:'ROSEBLAD'},
-   { title:'SexED', beskrivelse:'Ha seksualundervisning for en førsteklasse hvor du demonstrerer bevegelsene i praksis. Få en førstis til å filme litt.', element:'Skoleplassen', icon:'LITEN BLOMST'},
-   { title:'Bråkete telting', beskrivelse:'Camp i en rundkjøring en hel natt, ta bilder eller en overlevelsesnutt.', element:'Diverse', icon:'LITEN STEIN'},
-   { title:'Pult førstis', beskrivelse:'Kidnapp pulten til en førsteklassing. Få med en medruss til å filme at du tar den, og en førstis til å filme reaksjonen. ', element:'Skoleplassen', icon:'VISKELÆR'},
-   { title:'Det er bare porno', beskrivelse:'Kjøp et pornoblad på en bensinstasjon/kiosk. Få hjelp av en av de ansatte til å få det ned fra hylla. Få en tilfeldig til å filme.', element:'Diverse', icon:'NAKENBILDE'},
-   { title:'Røyking dreper', beskrivelse:'Spør noen om å bomme en røyk. Knekk den så foran dem og rop ”RØYKING DREPER”. Få en venn til å filme.', element:'Hjertesak', icon:'SIGARETT'},
-   { title:'Pantepenger', beskrivelse:'Betal en vare som koster mer enn 100 kroner,med bare enkroninger. Insister på at de skal telle over. Snikfilm. ', element:'Diverse', icon:'ENKRONING'},
-   { title:'Snusleppa', beskrivelse:'Behold bakesnus i leppa 5 timer, klin med en medruss på slutten', element:'Toxic', icon:'SNUSEMBALASJE'},
-   { title:'Markert', beskrivelse:'La en medruss tegne deg i ansiktet med en sort tusj, og gå sånn resten av dagen. Få folk til å ta bilder i løpet av dagen.', element:'Diverse', icon:'TUSJEN'},
-   { title:'Garderobeskift', beskrivelse:'Skift i det motsatte kjønns garderobe før- og etter en gymtime. Ta en selfie.', element:'Skoleplassen', icon:'SEIGMANN/SEIGDAME'},
-   { title:'Endelig', beskrivelse:'Stå på eksamen. Vis bilde av at du har bestått', element:'Skoleplassen', icon:'MULIG Å KASTE RUSSEDRESSEN'},
+  af.list('/russtrikes').valueChanges()
+    .subscribe(result => {
+      this.strikes = result;
+      console.log(this.strikes);
+  });
 
-  
- 
-   ]
-
-
-
-  constructor() { }
+   }
 
   ngOnInit() {
   }

@@ -29,10 +29,17 @@ export class SwipeStrikesPage  {
   stackConfig: StackConfig;
   userEmail: string;
   strikes: any[];
+  russtrikes: any[];
 
   constructor(public af: AngularFireDatabase, private authService: AuthenticateService, private navCtrl: NavController) {
 
   af.list('/strikes').valueChanges()
+    .subscribe(result => {
+      this.strikes = result;
+      console.log(this.strikes);
+  });
+
+  af.list('/russtrikes').valueChanges()
     .subscribe(result => {
       this.strikes = result;
       console.log(this.strikes);

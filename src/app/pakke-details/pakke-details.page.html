@@ -1,3 +1,17 @@
+<!-- let strike of strikes = vanlig strikes
+     let russ of russtrikes = russe strikes
+
+     {{ strike.title }}
+     {{ strike.beskrivelse }}
+     {{ strike.idk }}
+     {{ strike.img }}
+
+     {{ russ.title }}
+     {{ russ.beskrivelse }}
+     {{ russ.element }}
+     {{ russ.icon }}
+-->
+
 <ion-header>
   <ion-toolbar>
     <ion-title>pakke-details</ion-title>
@@ -40,7 +54,7 @@
 
 
 
-            <ion-row *ngFor="let item of items" style="    border-bottom: 1px solid #e7e7e7;">
+            <ion-row *ngFor="let strike of strikes" style="    border-bottom: 1px solid #e7e7e7;">
               <ion-col size="3">
                   
 
