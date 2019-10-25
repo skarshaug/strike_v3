@@ -17,7 +17,8 @@ const routes: Routes = [
   { path: 'my-friends', loadChildren: './my-friends/my-friends.module#MyFriendsPageModule' },
   { path: 'invite-friends', loadChildren: './invite-friends/invite-friends.module#InviteFriendsPageModule' },
   { path: 'add-new-friends', loadChildren: './add-new-friends/add-new-friends.module#AddNewFriendsPageModule' },
-  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' }
+  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },  { path: 'pakke-details', loadChildren: './pakke-details/pakke-details.module#PakkeDetailsPageModule' }
+
 ];
  
 @NgModule({

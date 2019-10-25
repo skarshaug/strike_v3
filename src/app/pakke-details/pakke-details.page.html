@@ -1,0 +1,351 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pakke-details</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<h2>Utført</h2>
+          <!-- List of Text Items -->
+          <ion-list >
+        
+
+            <ion-row style="    border-bottom: 1px solid #e7e7e7;">
+              <ion-col size="2">
+                <img style="     border-radius: 0;
+                overflow: hidden;
+                width: 26px;
+                height: 26px;
+                margin-top: 7px;
+                margin-left: 27px; color:#363636; " src="assets/images/elementType/toxic.svg" >
+              </ion-col>
+              <ion-col size="8">
+               <h2 style="
+               font-size: 16px;
+               
+               color:#363636;">Søvnløs</h2>
+               <p style="font-size: 12px;">Hold deg våken i 48 timer uten søvn.</p>
+              </ion-col>
+              <ion-col>
+                <img style="     border-radius: 0;
+                overflow: hidden;
+                width: 26px;
+                height: 26px;
+                margin-top: 7px;
+                margin-left: 27px; color:#363636; " src="assets/images/elementType/toxic.svg" >
+              </ion-col>
+            </ion-row>
+
+
+
+            <ion-row *ngFor="let item of items" style="    border-bottom: 1px solid #e7e7e7;">
+              <ion-col size="3">
+                  
+
+                  <i [ngClass]="item.icon"> </i>
+              </ion-col>
+              <ion-col size="8">
+               <h2 style="
+               font-size: 16px;
+               
+               color:#363636;">{{item.title}}</h2>
+               <p style="font-size: 12px;">{{item.beskrivelse}}</p>
+              </ion-col>
+              <ion-col>
+                 
+              </ion-col>
+            </ion-row>
+
+
+
+
+            <ion-row style="    border-bottom: 1px solid #e7e7e7;">
+                <ion-col size="3">
+                    
+  
+                    <i class="btn flaticon-tall-hat-with-mustache"> </i>
+                </ion-col>
+                <ion-col size="8">
+                 <h2 style="
+                 font-size: 16px;
+                 
+                 color:#363636;">Hoff the dong</h2>
+                 <p style="font-size: 12px;">Få et medlem av Russens Hovedstyre til å bekrefte med tommel opp.</p>
+                </ion-col>
+                <ion-col>
+                  <img style="     border-radius: 0;
+                  overflow: hidden;
+                  width: 26px;
+                  height: 26px;
+                  margin-top: 7px;
+                  margin-left: 27px; color:#363636; " src="assets/images/elementType/toxic.svg" >
+                </ion-col>
+              </ion-row>
+
+              <ion-row style="    border-bottom: 1px solid #e7e7e7;">
+                  <ion-col size="3">
+                      
+    
+                      <i class="btn flaticon-knot-1"> </i>
+                  </ion-col>
+                  <ion-col size="8">
+                   <h2 style="
+                   font-size: 16px;
+                   
+                   color:#363636;">Hoff the dong</h2>
+                   <p style="font-size: 12px;">Få et medlem av Russens Hovedstyre til å bekrefte med tommel opp.</p>
+                  </ion-col>
+                  <ion-col>
+                    <img style="     border-radius: 0;
+                    overflow: hidden;
+                    width: 26px;
+                    height: 26px;
+                    margin-top: 7px;
+                    margin-left: 27px; color:#363636; " src="assets/images/elementType/toxic.svg" >
+                  </ion-col>
+                </ion-row>
+
+
+
+                <ion-row style="    border-bottom: 1px solid #e7e7e7;">
+                    <ion-col size="3">
+                        
+      
+                        <i class="btn flaticon-champagne"> </i>
+                    </ion-col>
+                    <ion-col size="8">
+                     <h2 style="
+                     font-size: 16px;
+                     
+                     color:#363636;">Hoff the dong</h2>
+                     <p style="font-size: 12px;">Få et medlem av Russens Hovedstyre til å bekrefte med tommel opp.</p>
+                    </ion-col>
+                    <ion-col>
+                      <img style="     border-radius: 0;
+                      overflow: hidden;
+                      width: 26px;
+                      height: 26px;
+                      margin-top: 7px;
+                      margin-left: 27px; color:#363636; " src="assets/images/elementType/toxic.svg" >
+                    </ion-col>
+                  </ion-row>
+
+
+
+                  
+                <ion-row style="    border-bottom: 1px solid #e7e7e7;">
+                    <ion-col size="3">
+                        
+      
+                        <i class="btn flaticon-ice-cream"> </i>
+                    </ion-col>
+                    <ion-col size="8">
+                     <h2 style="
+                     font-size: 16px;
+                     
+                     color:#363636;">Hoff the dong</h2>
+                     <p style="font-size: 12px;">Få et medlem av Russens Hovedstyre til å bekrefte med tommel opp.</p>
+                    </ion-col>
+                    <ion-col>
+                      <img style="     border-radius: 0;
+                      overflow: hidden;
+                      width: 26px;
+                      height: 26px;
+                      margin-top: 7px;
+                      margin-left: 27px; color:#363636; " src="assets/images/elementType/toxic.svg" >
+                    </ion-col>
+                  </ion-row>
+           
+
+            <a class="label-md" (click)="goToStrike()"> 
+            <ion-item class="ion-no-padding"  >
+        
+              <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+        
+        
+            <img style="     border-radius: 0;
+            overflow: hidden;
+            width: 26px;
+            height: 26px;
+            margin-top: 7px;
+            margin-left: 27px; color:#363636; " src="assets/images/elementType/toxic.svg" >
+           </ion-avatar>
+            <p style="    position: absolute;
+            right: 15px;
+            top: 0px;
+            font-size: 13px;">4 days left</p>
+           <h2 style="position: relative;
+           font-size: 16px;
+           top: -15px;
+           left: 35px;color:#363636;">Søvnløs</h2>
+           <p style="    position: absolute;
+           bottom: 0;
+           font-size: 12px;
+           left: 75px;">Hold deg våken i 48 timer uten søvn. </p>
+        </ion-item>
+     
+      </a>
+        
+        
+        <ion-item class="ion-no-padding" >
+        
+          <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+        
+        
+        <img style="     border-radius: 0;
+        overflow: hidden;
+        width: 26px;
+        height: 26px;
+        margin-top: 7px;
+        margin-left: 27px;  " src="assets/images/elementType/toxic.svg" >
+        </ion-avatar>
+        <p style="    position: absolute;
+        right: 15px;
+        top: 0px;
+        font-size: 13px;">4 days left</p>
+        <h2 style="position: relative;
+        font-size: 16px;
+        top: -15px;
+        left: 35px;color:#363636;">Hook</h2>
+        <p style="    position: absolute;
+        bottom: 0;
+        font-size: 12px;
+        left: 75px;">Klin med et medlem av Russens Hovedstyre. Få noen til å filme.</p>
+        </ion-item>
+        
+        
+        
+        
+        
+        <ion-item class="ion-no-padding" >
+        
+          <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+        
+        
+        <img style="     border-radius: 0;
+        overflow: hidden;
+        width: 26px;
+        height: 26px;
+        margin-top: 7px;
+        margin-left: 27px;  " src="assets/images/elementType/toxic.svg" >
+        </ion-avatar>
+        <p style="    position: absolute;
+        right: 15px;
+        top: 0px;
+        font-size: 13px;">4 days left</p>
+        <h2 style="position: relative;
+        font-size: 16px;
+        top: -15px;
+        left: 35px;color:#363636;">Hoff the dong</h2>
+        <p style="    position: absolute;
+        bottom: 0;
+        font-size: 12px;
+        left: 75px;">Få et medlem av Russens Hovedstyre til å bekrefte med tommel opp.</p>
+        </ion-item>
+        
+        
+        
+        
+        
+        </ion-list>
+
+        <h2>Gjennstår</h2>
+        <!-- List of Text Items -->
+        <ion-list >
+      
+          <a class="label-md" (click)="goToStrike()"> 
+          <ion-item class="ion-no-padding"  >
+      
+            <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+      
+      
+          <img style="     border-radius: 0;
+          overflow: hidden;
+          width: 26px;
+          height: 26px;
+          margin-top: 7px;
+          margin-left: 27px; color:#363636; " src="assets/images/elementType/toxic.svg" >
+         </ion-avatar>
+          <p style="    position: absolute;
+          right: 15px;
+          top: 0px;
+          font-size: 13px;">4 days left</p>
+         <h2 style="position: relative;
+         font-size: 16px;
+         top: -15px;
+         left: 35px;color:#363636;">Søvnløs</h2>
+         <p style="    position: absolute;
+         bottom: 0;
+         font-size: 12px;
+         left: 75px;">Hold deg våken i 48 timer uten søvn. </p>
+      </ion-item>
+   
+    </a>
+      
+      
+      <ion-item class="ion-no-padding" >
+      
+        <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+      
+      
+      <img style="     border-radius: 0;
+      overflow: hidden;
+      width: 26px;
+      height: 26px;
+      margin-top: 7px;
+      margin-left: 27px;  " src="assets/images/elementType/toxic.svg" >
+      </ion-avatar>
+      <p style="    position: absolute;
+      right: 15px;
+      top: 0px;
+      font-size: 13px;">4 days left</p>
+      <h2 style="position: relative;
+      font-size: 16px;
+      top: -15px;
+      left: 35px;color:#363636;">Lag snø-engler i badedrakt</h2>
+      <p style="    position: absolute;
+      bottom: 0;
+      font-size: 12px;
+      left: 75px;">From Siripus</p>
+      </ion-item>
+      
+      
+      
+      
+      
+      <ion-item class="ion-no-padding" >
+      
+        <ion-avatar item-left style="margin: 8px 0px 8px 0;">
+      
+      
+      <img style="     border-radius: 0;
+      overflow: hidden;
+      width: 26px;
+      height: 26px;
+      margin-top: 7px;
+      margin-left: 27px;  " src="assets/images/elementType/toxic.svg" >
+      </ion-avatar>
+      <p style="    position: absolute;
+      right: 15px;
+      top: 0px;
+      font-size: 13px;">4 days left</p>
+      <h2 style="position: relative;
+      font-size: 16px;
+      top: -15px;
+      left: 35px;color:#363636;">Lag snø-engler i badedrakt</h2>
+      <p style="    position: absolute;
+      bottom: 0;
+      font-size: 12px;
+      left: 75px;">From Siripus</p>
+      </ion-item>
+      
+      
+      
+      
+      
+      </ion-list>
+
+
+</ion-content>
