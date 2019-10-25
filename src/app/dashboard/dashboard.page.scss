@@ -74,5 +74,62 @@ page-profile {
          -webkit-box-shadow: none;
       box-shadow: none;
     }
-    
+
+    .nr{
+        color: #ffffff;
+        position: absolute;
+        top: -6px;
+        left: 70px;
+        font-size: 10px;
+        background-color: #f24c71;
+        width: 27px;
+        border-radius: 30px;
+        padding: 5px;
+
+    }
+    .round2{
+
+
+        background: #ffda44;
+        /* width: 0px; */
+        /* margin-left: 30px; */
+        /* margin-right: 30px; */
+        border-radius: 40px;
+        /* height: 300px; */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 50px;
+        height: 50px;
+        margin-left: 25%;
+    }
+
+    ion-row{
+
+
+        text-align: center;
+    }
+
+
+    .module-border-wrap {
+        max-width: 250px;
+        padding: 1rem;
+        position: relative;
+        background: linear-gradient(216deg, #ff8a40, #fd5068, #dc4588);
+        padding: 3px;
+        border-radius: 20px;
+      }
+      
+      .module {
+        background: white;
+        color: white;
+        
+        border-radius: 20px;
+      }
+
+      .center-cropped3 {
+        object-fit: cover; /* Do not scale the image */
+        object-position: left; /* Center the image within the element */
+        height: 120px;
+        width: 100%;
+      }
   
